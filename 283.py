@@ -37,3 +37,19 @@ class Solution2:
                 nums.append(0)
                 del nums[i]
                 size -= 1
+
+
+# Runtime: 164 ms, faster than 12.16% of Python3 online submissions for Move Zeroes.
+# Memory Usage: 15.5 MB, less than 20.87% of Python3 online submissions for Move Zeroes.
+class Solution3:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        i = 0
+        for num in nums:
+            if num:
+                nums[i] = num
+                i += 1
+        for j in range(i, len(nums)):
+            nums[j] = 0
