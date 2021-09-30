@@ -21,4 +21,17 @@
   - Entropy on the other hand is a measure of impurity.
   - Now, by comparing the entropy before and after the split, we obtain a measure of information gain, or how much information we gained by doing the split using that particular feature.
   - Information Gain = Entropy before - Entropy after
-  
+### What advantages does a decision tree model have?
+- Very easy to interpret and understand
+- Works on both continuous and categorical features
+- No normalization or scaling necessary
+- prediction algorithm runs very fast
+### What is the difference between a random forest versus boosting tree algorithms?
+- Boosting Trees
+  - Reassign weights to samples based on the results of previous iterations of classifications.
+  - Harder to classify points get weighted more.
+  - Iterative algorithm where each execution is based on the previous results.
+- Random Forest
+  - RF applies bootstrap aggregation to train many different trees.
+  - This creates an ensemble of different individual decision trees.
+  - In random forest algorithm, instead of using information gain or gini index for calculating the root node, the process of finding the root node and splitting the feature nodes will happen randomly.
