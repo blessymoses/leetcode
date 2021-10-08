@@ -45,3 +45,45 @@ print(
     *inorder_result,
     sep="  ",
 )  # 7  5  4  6
+"""
+Pre-order traversal
+
+Root Left Right
+Root is followed by left and right
+"""
+preorder_result = []
+
+
+def preorder(node):
+    if node:
+        preorder_result.append(node.value)
+        preorder(node.left)
+        preorder(node.right)
+
+
+preorder(root)
+print(
+    *preorder_result,
+    sep="  ",
+)  # 4  5  7  6
+"""
+Post-order traversal
+
+Left Right Root
+Root is visited after left and right
+"""
+postorder_result = []
+
+
+def postorder(node):
+    if node:
+        postorder(node.left)
+        postorder(node.right)
+        postorder_result.append(node.value)
+
+
+postorder(root)
+print(
+    *postorder_result,
+    sep="  ",
+)  # 7  5  6  4

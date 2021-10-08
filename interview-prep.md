@@ -63,3 +63,6 @@
   - RF applies bootstrap aggregation to train many different trees.
   - This creates an ensemble of different individual decision trees.
   - In random forest algorithm, instead of using information gain or gini index for calculating the root node, the process of finding the root node and splitting the feature nodes will happen randomly.
+### Given a dataset of features `x` and labels `y`, what assumptions are made when using Naive Bayes methods?
+- Naive Bayes algorithm assumes that the features of `X` are conditionally independent of each other for the given `Y`.
+- The idea that each feature is independent of each other may not always be true, but we assume it to be true to apply Naive Bayes. This "naive" assumption is where the namesake comes from.
