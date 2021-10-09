@@ -25,6 +25,26 @@
 12. Admin processes
     - Run admin/management tasks as one-off processes
 
+## Docker
+### Containerization
+- Containerization allows us to create an abstract representation of all the software applications.
+- An image is created and any number of containers can be launched using the image, in any environment easily
+### Docker
+- Docker is a containerization tool or framework that allows us to package once and run anywhere.
+- It implements the open container initiative standard and the docker image will have the entire infrastructure information along with the application itself.
+### Docker components and workflow
+- `Docker registry`: this is where all the docker images are stored centrally.
+- `Docker Host` is the machine where docker engine is installed.
+- `Docker client` gives the ability to run commands against the docker engine.
+### Image Layers and Overlay
+- A docker image is made up of multiple layers. It uses the concept of `Union File System` to integrate these layers together.
+- When we pull an image, it pulls several layers, starting with the base kernel and then it will merge and all those layers are overlays one layer on top of another.
+- When we pull the next time, it will pull only the layers that have changed.
+### docker run
+- Runs a command in a new container
+- The docker run command first creates a writeable container layer over the specified image, and then starts it using the specified command.
+- docker run is equivalent to the API /containers/create then /containers/(id)/start. 
+
 ## ML
 ### What are the main assumptions of a linear regression?
 - A linear regression models a relationship between the dependant variable y and independant variable x
@@ -66,3 +86,4 @@
 ### Given a dataset of features `x` and labels `y`, what assumptions are made when using Naive Bayes methods?
 - Naive Bayes algorithm assumes that the features of `X` are conditionally independent of each other for the given `Y`.
 - The idea that each feature is independent of each other may not always be true, but we assume it to be true to apply Naive Bayes. This "naive" assumption is where the namesake comes from.
+### Describe how the support vector machine(SVM) algorithm works
